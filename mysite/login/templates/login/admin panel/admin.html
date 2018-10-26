@@ -1,0 +1,30 @@
+{% extends 'login/admin panel/header.html' %}
+{% block content %}
+<section class="wrapp">
+    <section class="Heading">
+        <h1><span>Change your</span> Admin Password</h1>
+    </section>
+
+    <section class="add_menu">
+        <ul>
+            <li>
+                <label for="old-pass">Old Password</label>
+                <input type="password" name="old-pass"/>
+            </li>
+            <li>
+                <label for="new-pass">New Password</label>
+                <input type="password" name="new-pass"/>
+            </li>
+            <li>
+                <label for="confirm-pass">Confirm Password</label>
+                <input type="password" name="confirm-pass"/>
+            </li>
+            <li>
+                <input type="button" name="change-password" value="Change Password"/>
+            </li>
+        </ul>
+    </section>
+</section>
+{% endblock %}
+
+

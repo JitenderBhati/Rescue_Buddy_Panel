@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title> Rescue Buddy | Admin Panel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% load static %}
+    <link href="{% static 'admin/css/admin.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="{% static 'admin/css/fonts.css' %}" rel="stylesheet" type="text/css" media="screen"/>
+</head>
+
+<body>
+<center>
+
+    <section class="top">
+        <ul>
+            <li><a href="#"><img src="{% static 'admin/images/logo.png' %}" alt="Logo"></a></li>
+            <li>
+                <dl>
+                    <dt>Welcome to <span>Admin Panel</span></dt>
+                    <dt><a href="{% url 'Log Out' %}" title="Logout">Logout</a></dt>
+                </dl>
+            </li>
+        </ul>
+    </section>
+
+    <section class="nav">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" title="My Account" class="active">
+                        My Account
+                    </a>
+                    <dl class="drop">
+                        <dt><a href="#" title="Change Password">Change Password</a></dt>
+                        <dt><a href="{% url 'Log Out' %}" title="Logout">Logout</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#" title="Menu Management">
+                        Menu Management
+                    </a>
+                    <dl class="drop">
+                        <dt><a href="add-menu.html" title="Add Menu">Add Menu</a></dt>
+                        <dt><a href="view-edit-menu.html" title="View/Edit Menu">View/Edit Menu</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#" title="Submenu Management">
+                        Sub-Menu
+                    </a>
+                    <dl class="drop">
+                        <dt><a href="add-submenu.html" title="Add Sub-Menu">Add Sub-Menu</a></dt>
+                        <dt><a href="edit-submenu.html" title="View/Edit Sub-Menu">View/Edit Sub-Menu</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#" title="Content Management">
+                        Content Management
+                    </a>
+                    <dl class="drop">
+                        <dt><a href="add-content.html" title="Add Content">Add Content</a></dt>
+                        <dt><a href="edit-content.html" title="View/Edit Content">View/Edit Content</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#" title="Gallery Management">
+                        Gallery Management
+                    </a>
+                    <dl class="drop">
+                        <dt><a href="add-gallery.html" title="Add Gallery">Add Gallery</a></dt>
+                        <dt><a href="edit-gallery.html" title="View/Edit Gallery">View/Edit Gallery</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="#" title="Bottom Slider Management">
+                        Bottom Slider
+                    </a>
+                    <dl class="drop">
+                        <dt><a href="add-slider.html" title="Add Slider Photo">Add Slider Photo</a></dt>
+                        <dt><a href="edit-slider.html" title="View/Edit Slider Photo">View/Edit Slider Photo</a></dt>
+                    </dl>
+                </li>
+                <li id="userfiles">
+                    <a href="#" title="Users Management">
+                        Users Management
+                    </a>
+                    <dl class="drop">
+                        <dt><a href="new-users.html" title="New Users">New Users</a></dt>
+                        <dt><a href="approved-users.html" title="Approved Usres">Approved Usres</a></dt>
+                    </dl>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    {% block content %}
+    {% endblock %}
+    <footer>&copy; Copyright All Rights Reserved to Rescue Buddy 2018.</footer>
+
+</center>
+<script src="{% static 'login/vendor/bootstrap/js/popper.js' %}"></script>
+<script src="{% static 'login/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
